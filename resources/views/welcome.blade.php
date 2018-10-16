@@ -2,21 +2,48 @@
 
 @section('content')
 
-<div class="row">
+<div class="row no-margin-bot">
+    <div class="col s12 m12">
+        <div class="card">
+            <div class="card-content">
 
-    <div class="col s12 m6">
-        <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
+                <span class="card-title">Welcome to On Belay</span>
 
-                <span class="card-title">Card Title</span>
-                
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p>Where you're desperate to send, but no-one wants to climb with you!</p>
 
             </div>
         </div>
     </div>
+</div>
 
+<div class="row no-margin-bot">
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
+    <div class="col s4 m4">
+        @include('components.profile-card')
+    </div>
 </div>
 
 @endsection

@@ -1,0 +1,78 @@
+
+/*@media only screen and (min-width: 601px) {
+
+    nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+        height: 150px;
+        line-height: 150px;
+    }
+
+}*/
+
+html {
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+}
+
+body {
+    color: rgba(0,0,0,0.87);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased
+}
+
+main {
+    margin-top: -20px;
+}
+
+span.card-title i.material-icons {
+    vertical-align: text-top;
+}
+
+.finder-form [type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
+    margin-left: 9px;
+    :first-child {
+        margin-left: 0;
+    }
+}
+
+.no-margin-bot {
+    margin-bottom: 0!important;
+}
+
+.chip.chip-small {
+    height: 27px;
+    font-size: 10px;
+    line-height: 26px;
+}
+
+/**
+ * profile card actions
+ */
+.profile-card .fixed-action-btn, .profile-card .btn-action {
+    position: absolute;
+    right: -2px;
+    top: -5px;
+}
+
+.fixed-action-btn.direction-left ul, .fixed-action-btn.direction-right ul {
+    right: 30px;
+    top: 7px;
+    height: auto;
+    bottom: auto;
+}
+
+.fixed-action-btn.direction-left, .fixed-action-btn.direction-right {
+    padding: 0;
+}
+
+.profile-card .fixed-action-btn.active .btn-action {
+    opacity: 0.5;
+}
+
+.profile-card .fixed-icons {
+    position: absolute;
+    right: 4px;
+    top: 26px;
+    width: 15px;
+}

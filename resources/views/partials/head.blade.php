@@ -12,20 +12,4 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <style>
-        html {
-            line-height: 1.5;
-            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-            font-weight: normal;
-            color: rgba(0,0,0,0.87);
-        }
-        
-        body {
-            color: rgba(0,0,0,0.87);
-            line-height: 1.6;
-            font-size: 16px;
-            -webkit-font-smoothing: antialiased
-        }
-    </style>
 </head>

@@ -9,7 +9,14 @@
 //@import '~bootstrap/scss/bootstrap';
 
 // Materialize
-@import './../../node_modules/materialize-css/sass/materialize.scss';
+@import './../../node_modules/materialize-css/sass/materialize';
+
+// nouiSlider
+@import './../../node_modules/materialize-css/extras/noUiSlider/nouislider';
+
+// Materialze overrides
+@import 'materialoverride';
+
 
 .navbar-laravel {
   background-color: #fff;
