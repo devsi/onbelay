@@ -15,11 +15,11 @@
             @endif
 
             <div class="row">
-                <div class="col s4">
+                <div class="col s12 m12 l4">
                     @include('partials.sidebar')
                 </div>
 
-                <div class="col s8">
+                <div class="col s12 m12 l8">
                     @yield('content')
                 </div>
             </div>

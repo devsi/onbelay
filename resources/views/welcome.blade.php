@@ -17,31 +17,31 @@
 </div>
 
 <div class="row no-margin-bot">
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
-    <div class="col s4 m4">
+    <div class="col s12 m6 xl4">
         @include('components.profile-card')
     </div>
 </div>
