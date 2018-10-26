@@ -22,22 +22,11 @@ body {
 }
 
 main {
-    margin-top: -20px;
+    //margin-top: -20px;
 }
 
 span.card-title i.material-icons {
     vertical-align: text-top;
-}
-
-.finder-form [type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
-    margin-left: 9px;
-    :first-child {
-        margin-left: 0;
-    }
-}
-
-.no-margin-bot {
-    margin-bottom: 0!important;
 }
 
 .chip.chip-small {

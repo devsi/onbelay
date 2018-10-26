@@ -22,3 +22,20 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.finder-form [type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
+  margin-left: 9px;
+  :first-child {
+      margin-left: 0;
+  }
+}
+
+.no-margin-bot {
+  margin-bottom: 0!important;
+}
+
+.collection a.remove span {
+  font-size: 15px;
+  margin: 0 8px 0 -10px;
+  vertical-align: middle;
+}

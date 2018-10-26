@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/** Auth */
+Route::get('/register', Auth\RegisterController::class.'@show')->name('auth.register');
+Route::post('/register', Auth\RegisterController::class.'@register')->name('auth.register');
+Route::get('/login', Auth\LoginController::class."@show")->name('auth.login');
+Route::post('/login', Auth\LoginController::class."@login")->name('auth.login');
+Route::post('/logout', Auth\LoginController::class."@logout")->name('auth.logout');
+
+
+/** User */
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/profile', User\ProfileController::class."@show")->name('user.profile');
+
+});

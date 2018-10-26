@@ -13,9 +13,6 @@ $(function () {
     // initialize selects
     $('select').formSelect();
 
-    // initialize collapsibles
-    $('.collapsible').collapsible();
-
     // initialize fixed action buttons
     $('.profile-action').floatingActionButton({
         direction: 'left',
@@ -24,6 +21,12 @@ $(function () {
 
     // initialize tooltips
     $('.tooltipped').tooltip();
+
+    // initialize tabs
+    $('.tabs').tabs();
+
+    // initialize chips
+    $('.chips').chips();
 
     // initialize toggles
     $('input.find-types').change(function () {

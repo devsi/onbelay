@@ -8,18 +8,10 @@
     @include('partials.nav')
 
     <main>
-        <div class="">
-            
-            @if (Session::has('flash'))
-                @include('components.info-panel', [ 'color' => Session::get('level'), 'contents' => Session::get('flash') ])
-            @endif
+        <div class="container">
 
             <div class="row">
-                <div class="col s4">
-                    @include('partials.sidebar')
-                </div>
-
-                <div class="col s8">
+                <div class="col s12 m12">
                     @yield('content')
                 </div>
             </div>

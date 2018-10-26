@@ -9988,26 +9988,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-main {
-  margin-top: -20px;
-}
-
 span.card-title i.material-icons {
   vertical-align: text-top;
-}
-
-.finder-form [type="radio"]:not(:checked) + span,
-[type="radio"]:checked + span {
-  margin-left: 9px;
-}
-
-.finder-form [type="radio"]:not(:checked) + span :first-child,
-[type="radio"]:checked + span :first-child {
-  margin-left: 0;
-}
-
-.no-margin-bot {
-  margin-bottom: 0 !important;
 }
 
 .chip.chip-small {
@@ -10055,5 +10037,25 @@ span.card-title i.material-icons {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.finder-form [type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
+  margin-left: 9px;
+}
+
+.finder-form [type="radio"]:not(:checked) + span :first-child,
+[type="radio"]:checked + span :first-child {
+  margin-left: 0;
+}
+
+.no-margin-bot {
+  margin-bottom: 0 !important;
+}
+
+.collection a.remove span {
+  font-size: 15px;
+  margin: 0 8px 0 -10px;
+  vertical-align: middle;
 }
 
