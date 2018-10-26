@@ -26,24 +26,24 @@
 
                     <div class="row">
                         <div class="input-field col s6 m6">
-                            <input placeholder="" id="username" type="text" class="validate" value="{{ Auth::user()->name }}" disabled>
+                            <input placeholder="" id="username" type="text" class="validate" value="{{ $user->name }}" disabled>
                             <label for="username">Username</label>
                         </div>
 
                         <div class="input-field col s6 m6">
-                            <input placeholder="" id="email" type="text" class="validate" value="{{ Auth::user()->email }}" disabled>
+                            <input placeholder="" id="email" type="text" class="validate" value="{{ $user->email }}" disabled>
                             <label for="email">Email</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s6 m6">
-                            <input placeholder="" id="username" type="text" class="validate" value="{{ Auth::user()->firstname }}" disabled>
+                            <input placeholder="" id="username" type="text" class="validate" value="{{ $user->firstname }}" disabled>
                             <label for="username">First Name</label>
                         </div>
 
                         <div class="input-field col s6 m6">
-                            <input placeholder="" id="surname" type="text" class="validate" value="{{ Auth::user()->surname }}" disabled>
+                            <input placeholder="" id="surname" type="text" class="validate" value="{{ $user->surname }}" disabled>
                             <label for="surname">Last Name</label>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
 
                             <ul class="tabs">
                                 <li class="tab col s4"><a class="active" href="#essentials">Essentials</a></li>
-                                <li class="tab col s4"><a href="#trad">Trad</a></li>
+                                <li class="tab col s4"><a href="#trad-aid">Trad & Aid</a></li>
                                 <li class="tab col s4"><a href="#ice">Ice</a></li>
                             </ul>
 
@@ -86,16 +86,26 @@
                                 <i class="material-icons prefix">filter_list</i>
                                 <input placeholder="Add your gear..." type="text" id="gear-essentials" class="autocomplete">
 
-                                <div class="collection">                                    
+                                <div class="collection">
+                                    @foreach ($user->gear as $gear)
+                                        @if ($gear->category == 'essentials')
+                                            @include('components.gear-item', ['gear' => $gear])
+                                        @endif
+                                    @endforeach
                                 </div>
                             </ul>
 
                             <!-- gear -->
-                            <ul id="trad" class="input-field col s12">
+                            <ul id="trad-aid" class="input-field col s12">
                                 <i class="material-icons prefix">filter_list</i>
-                                <input placeholder="Add your gear..." type="text" id="gear-trad" class="autocomplete">
+                                <input placeholder="Add your gear..." type="text" id="gear-trad-aid" class="autocomplete">
 
-                                <div class="collection">                                    
+                                <div class="collection">
+                                    @foreach ($user->gear as $gear)
+                                        @if ($gear->category === 'trad & aid')
+                                            @include('components.gear-item', ['gear' => $gear])
+                                        @endif
+                                    @endforeach                                  
                                 </div>
                             </ul>
 
@@ -104,7 +114,12 @@
                                 <i class="material-icons prefix">filter_list</i>
                                 <input placeholder="Add your gear..." type="text" id="gear-ice" class="autocomplete">
 
-                                <div class="collection">                                    
+                                <div class="collection">
+                                    @foreach ($user->gear as $gear)
+                                        @if ($gear->category === 'ice')
+                                            @include('components.gear-item', ['gear' => $gear])
+                                        @endif
+                                    @endforeach                                  
                                 </div>
                             </ul>
 
@@ -137,11 +152,7 @@
 <script>
     $(function () {
 
-        var gear = {
-            'essentials': { 'Rope 30m': null, 'Rope 40m': null, 'Rope 60m': null, 'Rope 70m': null, 'Rope 100m': null, 'Quickdraws': null, 'ATC': null, 'ATC Guide': null, 'Grigri': null },
-            'trad': { 'BD Cam .3': null, 'BD Cam .4': null, 'BD Cam .5': null, 'BD Cam .75': null, 'BD Cam 1': null },
-            'ice': { 'Ice Tool': null, 'Crampons': null, 'Ice Screws': null } 
-        };
+        var gear = {!! $jsonCatalog !!};
 
         var $template = $('#collection-template');
 

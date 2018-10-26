@@ -37,4 +37,12 @@ class User extends Authenticatable
     {
         return "{$this->firstname} {$this->surname}";
     }
+
+    /**
+     * The gear that belongs to the user
+     */
+    public function gear()
+    {
+        return $this->belongsToMany('App\Models\Gear')->withPivot('quantity');
+    }
 }

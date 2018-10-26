@@ -16,6 +16,7 @@ class CreateGearUserTable extends Migration
         Schema::create('gear_user', function (Blueprint $table) {
             $table->integer('gear_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->integer('quantity');
 
             // indexing
             $table->primary(['gear_id', 'user_id']);

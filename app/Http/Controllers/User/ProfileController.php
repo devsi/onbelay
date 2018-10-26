@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Models\Gear;
 
 class ProfileController extends Controller
 {    
@@ -12,8 +13,15 @@ class ProfileController extends Controller
      */
     public function show()
     {
-        $user = \Auth::user();
+        $user = User::find(\Auth::id())->with('gear:id,name,category')->first();
 
-        return view('user.profile', compact('user'));
+        $jsonCatalog = [];
+        foreach(Gear::all() as $gear)
+        {
+            $category = str_replace(' ', '', str_replace('&', '-', $gear->category));
+            $jsonCatalog[$category][$gear->name] = null;
+        }
+
+        return view('user.profile', ['user' => $user, 'jsonCatalog' => json_encode($jsonCatalog)]);
     }
 }
