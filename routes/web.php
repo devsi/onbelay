@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', IndexController::class."@show")->name('home');
 
 /** Auth */
 Route::get('/register', Auth\RegisterController::class.'@show')->name('auth.register');
@@ -27,5 +25,7 @@ Route::post('/logout', Auth\LoginController::class."@logout")->name('auth.logout
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/profile', User\ProfileController::class."@show")->name('user.profile');
+    Route::get('/partner-request', User\PartnerController::class."@show")->name('user.partner-request');
+    Route::post('/partner-request', User\PartnerController::class."@submit")->name('user.partner-request');
 
 });

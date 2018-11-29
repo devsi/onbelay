@@ -6,7 +6,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-    
+
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/app.css"  media="screen,projection"/>
 

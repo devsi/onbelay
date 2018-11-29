@@ -6,19 +6,19 @@
 
                 <ul class="right hide-on-med-and-down">
                     <li><a href=""><i class="material-icons">search</i></a></li>
-                    <li><a href="{{ Auth::check() ? route('user.profile') : route('auth.login') }}"><i class="material-icons">person_outline</i></a></li>
+
+                    @if (Auth::check())
+                    <li><a href="{{ route('user.partner-request') }}"><i class="material-icons">filter_hdr</i></a></li>
+                    <li><a href="{{ route('user.profile') }}"><i class="material-icons">person_outline</i></a></li>
                     <li>
-                        @if (Auth::check())
-                            <form method="post" name="logout" action="{{ route('auth.logout') }}">
+                        <form method="post" name="logout" action="{{ route('auth.logout') }}">
                                 @csrf
                                 <a href="javascript:{}" onclick="document.logout.submit();"><i class="material-icons">power_settings_new</i></a>
-                            </form>
-                        @else
-                            <a href=""><i class="material-icons">more_vert</i></a>
-                        @endif
-
-                        
+                        </form>
                     </li>
+                    @else
+                        <li><a href=""><i class="material-icons">more_vert</i></a></li>
+                    @endif  
                 </ul>
             </div>
         </div>

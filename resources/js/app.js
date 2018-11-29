@@ -28,6 +28,12 @@ $(function () {
     // initialize chips
     $('.chips').chips();
 
+    // initialize datepicker
+    $('.datepicker').datepicker();
+
+    // initialize timepicker
+    $('.timepicker').timepicker();
+
     // initialize toggles
     $('input.find-types').change(function () {
         var selector = $(this).data('toggle');

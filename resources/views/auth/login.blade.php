@@ -1,7 +1,6 @@
 @extends('partials.no-sidebar')
 
 @section('content')
-
 <div class="row no-margin-bot">
     <div class="col s12 m12">
         <div class="card">
@@ -51,5 +50,4 @@
         </div>
     </div>
 </div>
-
 @endsection

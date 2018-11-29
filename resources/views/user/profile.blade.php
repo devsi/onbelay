@@ -1,22 +1,9 @@
 @extends('partials.master')
 
 @section('content')
-
-<div class="row no-margin-bot">
-    <div class="col s12 m12">
-        <div class="card">
-            <div class="card-content">
-
-                <span class="card-title">Welcome, {{ $user->fullname }}.</span>
-
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="row no-margin-bot">
     <!-- user personal -->
-    <div class="col s6 m6">
+    <div class="col s12 m6">
         <div class="card z-depth-0">
             <div class="card-content">
 
@@ -55,7 +42,7 @@
     </div>
 
     <!-- user gear -->
-    <div class="col s6 m6">
+    <div class="col s12 m6">
         <div class="card z-depth-0">
             <div class="card-content">
 
@@ -105,7 +92,7 @@
                                         @if ($gear->category === 'trad & aid')
                                             @include('components.gear-item', ['gear' => $gear])
                                         @endif
-                                    @endforeach                                  
+                                    @endforeach
                                 </div>
                             </ul>
 
@@ -119,12 +106,12 @@
                                         @if ($gear->category === 'ice')
                                             @include('components.gear-item', ['gear' => $gear])
                                         @endif
-                                    @endforeach                                  
+                                    @endforeach
                                 </div>
                             </ul>
 
                         </div>
-                        
+
                     </div>
 
                 </form>
@@ -133,18 +120,6 @@
         </div>
     </div>
 </div>
-<div class="row no-margin-bot">
-    <div class="col s12 m12">
-        <div class="card z-depth-0">
-            <div class="card-content">
-
-                <h6>Bio</h6>
-
-            </div>
-        </div>
-    </div>
-</div>
-
 @endsection
 
 @section('scripts')
@@ -187,7 +162,7 @@
             let $count = $(ele).siblings('.item-count');
             let number = parseInt($count.html());
             number += value;
-            
+
             // min cap
             if (number < 1) number = 1;
             //max cap

@@ -11,6 +11,14 @@ class Request extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'request', 'request_time', 'user_id'
+        'title', 'request', 'request_time', 'user_id', 'latitude', 'longitude', 'discipline'
     ];
+
+    /**
+     * Get the user that owns the request.
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }
